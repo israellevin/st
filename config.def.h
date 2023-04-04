@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DejaVu Sans Mono:autohint=true:antialias=true:size=16";
+static char *font = "Inconsolata Nerd Font Mono:autohint=true:antialias=true:size=32";
 static int borderpx = 0;
 
 /*
