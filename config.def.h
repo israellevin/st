@@ -176,6 +176,14 @@ static uint forcemousemod = ShiftMask;
 char *iso14755_cmd = "dmenu -p codepoint: </dev/null";
 
 /*
+ * Command used to print screen.
+ */
+static char *externalpipecmd[] = { "/bin/sh", "-c",
+	"/root/bin/externalpipe.sh",
+	"externalpipe", NULL
+};
+
+/*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
@@ -207,6 +215,7 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
+	{ TERMMOD,              XK_U,           externalpipe,   {.v = externalpipecmd} },
 };
 
 /*
