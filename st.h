@@ -82,6 +82,7 @@ void die(const char *, ...);
 void redraw(void);
 void draw(void);
 
+void iso14755(const Arg *);
 void printscreen(const Arg *);
 void printsel(const Arg *);
 void sendbreak(const Arg *);
@@ -133,3 +134,4 @@ extern char *urlhandler;
 extern char urlchars[];
 extern char *urlprefixes[];
 extern int nurlprefixes;
+extern char *iso14755_cmd;
