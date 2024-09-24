@@ -194,6 +194,11 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
+/*
+ * Command used to query unicode glyphs.
+ */
+static char *iso14755_cmd = "dmenu -w \"$WINDOWID\" -p codepoint: </dev/null";
+
 static char *externalpipecmd[] = { "/bin/sh", "-c",
 	"/root/bin/externalpipe.sh",
 	"externalpipe", NULL
@@ -213,6 +218,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
 	{ TERMMOD,              XK_U,           externalpipe,   {.v = externalpipecmd} },
 };
 

@@ -81,6 +81,7 @@ void die(const char *, ...);
 void redraw(void);
 void draw(void);
 
+void iso14755(const Arg *);
 void externalpipe(const Arg *);
 void printscreen(const Arg *);
 void printsel(const Arg *);
@@ -125,3 +126,4 @@ extern unsigned int tabspaces;
 extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern unsigned int defaultcs;
+extern char *iso14755_cmd;
